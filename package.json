@@ -1,0 +1,23 @@
+{
+  "name": "orator-serviceserver-restify",
+  "version": "1.0.0",
+  "description": "Restify Service Server for Orator",
+  "main": "source/Orator-ServiceServer-Restify.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenvelozo/orator-serviceserver-restify.git"
+  },
+  "author": "steven velozo <steven@velozo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevenvelozo/orator-serviceserver-restify/issues"
+  },
+  "homepage": "https://github.com/stevenvelozo/orator-serviceserver-restify#readme",
+  "dependencies": {
+    "orator-serviceserver": "^1.0.0",
+    "restify": "^11.1.0"
+  }
+}
