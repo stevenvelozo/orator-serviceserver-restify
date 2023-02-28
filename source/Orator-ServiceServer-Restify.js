@@ -1,4 +1,4 @@
-const libOratorServiceServerBase = require('orator-serviceserver');
+const libOratorServiceServerBase = require('orator').ServiceServerBase;
 const libRestify = require('restify');
 
 class OratorServiceServerRestify extends libOratorServiceServerBase
@@ -7,7 +7,7 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 	{
 		super(pOrator);
 
-		this.server = libRestify.createServer();			
+		this.server = libRestify.createServer();
 	}
 
 	/*
