@@ -7,6 +7,8 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 	{
 		super(pOrator);
 
+		this.ServiceServerType = 'Restify';
+
 		this.server = libRestify.createServer();
 	}
 
@@ -36,83 +38,76 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 	 * End of Service Lifecycle Functions
 	 */
 
-	get(pRoute, ...fRouteProcessingFunctions)
-	{
-		if (!super.get(pRoute, ...fRouteProcessingFunctions))
-		{
-			this.log.error(`RESTIFY provider failed to map GET route [${pRoute}]!`);
-			return false;
-		}
 
+
+	bodyParser()
+	{
+		// Restify has a built-in bodyParser plugin that returns a standard
+		// f(Request, Response, Next) => {}; function.
+		return libRestify.plugins.bodyParser(
+			{
+				maxBodySize: 0,
+				mapParams: false,
+				mapFiles: false,
+				overrideParams: false,
+/*
+				multipartHandler: function(part)
+					{
+						part.on('data', function(data) {
+						// do something with the multipart data
+						});
+					},
+				multipartFileHandler: function(part)
+					{
+						part.on('data', function(data) {
+						// do something with the multipart file data
+						});
+					},
+				keepExtensions: false,
+				uploadDir: os.tmpdir(),
+*/
+				multiples: true,
+				hash: 'sha1'
+			});
+	}
+
+	/*
+	 * Service Route Functions
+	 *************************************************************************/
+	doGet(pRoute, ...fRouteProcessingFunctions)
+	{
 		return this.server.get(pRoute, ...fRouteProcessingFunctions);
 	}
 
-	put(pRoute, ...fRouteProcessingFunctions)
+	doPut(pRoute, ...fRouteProcessingFunctions)
 	{
-		if (!super.put(pRoute, ...fRouteProcessingFunctions))
-		{
-			this.log.error(`RESTIFY provider failed to map PUT route [${pRoute}]!`);
-			return false;
-		}
-
 		return this.server.put(pRoute, ...fRouteProcessingFunctions);
 	}
 
-	post(pRoute, ...fRouteProcessingFunctions)
+	doPost(pRoute, ...fRouteProcessingFunctions)
 	{
-		if (!super.post(pRoute, ...fRouteProcessingFunctions))
-		{
-			this.log.error(`RESTIFY provider failed to map POST route [${pRoute}]!`);
-			return false;
-		}
-
 		return this.server.post(pRoute, ...fRouteProcessingFunctions);
 	}
 
-	del(pRoute, ...fRouteProcessingFunctions)
+	doDel(pRoute, ...fRouteProcessingFunctions)
 	{
-		if (!super.del(pRoute, ...fRouteProcessingFunctions))
-		{
-			this.log.error(`RESTIFY provider failed to map DEL route [${pRoute}]!`);
-			return false;
-		}
-
 		return this.server.del(pRoute, ...fRouteProcessingFunctions);
 	}
 
-	patch(pRoute, ...fRouteProcessingFunctions)
+	doPatch(pRoute, ...fRouteProcessingFunctions)
 	{
-		if (!super.patch(pRoute, ...fRouteProcessingFunctions))
-		{
-			this.log.error(`RESTIFY provider failed to map PATCH route [${pRoute}]!`);
-			return false;
-		}
-
 		return this.server.patch(pRoute, ...fRouteProcessingFunctions);
 	}
 
-	opts(pRoute, ...fRouteProcessingFunctions)
+	doOpts(pRoute, ...fRouteProcessingFunctions)
 	{
-		if (!super.opts(pRoute, ...fRouteProcessingFunctions))
-		{
-			this.log.error(`RESTIFY provider failed to map OPTS route [${pRoute}]!`);
-			return false;
-		}
-
 		return this.server.opts(pRoute, ...fRouteProcessingFunctions);
 	}
 
-	head(pRoute, ...fRouteProcessingFunctions)
+	doHead(pRoute, ...fRouteProcessingFunctions)
 	{
-		if (!super.head(pRoute, ...fRouteProcessingFunctions))
-		{
-			this.log.error(`RESTIFY provider failed to map HEAD route [${pRoute}]!`);
-			return false;
-		}
-
 		return this.server.head(pRoute, ...fRouteProcessingFunctions);
 	}
-
 	/*************************************************************************
 	 * End of Service Route Creation Functions
 	 */

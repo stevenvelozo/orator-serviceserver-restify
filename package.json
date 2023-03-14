@@ -1,10 +1,30 @@
 {
   "name": "orator-serviceserver-restify",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Restify Service Server for Orator",
   "main": "source/Orator-ServiceServer-Restify.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "coverage": "./node_modules/.bin/nyc --reporter=lcov --reporter=text-lcov ./node_modules/mocha/bin/_mocha -- -u tdd -R spec",
+    "test": "./node_modules/mocha/bin/_mocha --exit -u tdd -R spec"
+  },
+  "mocha": {
+    "diff": true,
+    "extension": [
+      "js"
+    ],
+    "package": "./package.json",
+    "reporter": "spec",
+    "slow": "75",
+    "timeout": "5000",
+    "ui": "tdd",
+    "watch-files": [
+      "source/**/*.js",
+      "test/**/*.js"
+    ],
+    "watch-ignore": [
+      "lib/vendor"
+    ]
   },
   "repository": {
     "type": "git",
@@ -19,5 +39,11 @@
   "dependencies": {
     "orator": "^3.0.7",
     "restify": "^11.1.0"
+  },
+  "devDependencies": {
+    "chai": "4.3.7",
+    "fable": "^3.0.11",
+    "mocha": "10.2.0",
+    "nyc": "^15.1.0"
   }
 }
