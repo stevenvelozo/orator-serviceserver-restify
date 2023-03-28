@@ -38,7 +38,16 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 	 * End of Service Lifecycle Functions
 	 */
 
+	use(fHandlerFunction)
+	{
+		if (!super.use(fHandlerFunction))
+		{
+			this.log.error(`RESTIFY provider failed to map USE handler function!`);
+			return false;
+		}
 
+		this.server.use(fHandlerFunction);
+	}
 
 	bodyParser()
 	{

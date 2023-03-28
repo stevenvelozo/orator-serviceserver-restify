@@ -1,12 +1,11 @@
 {
   "name": "orator-serviceserver-restify",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Restify Service Server for Orator",
   "main": "source/Orator-ServiceServer-Restify.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "coverage": "./node_modules/.bin/nyc --reporter=lcov --reporter=text-lcov ./node_modules/mocha/bin/_mocha -- -u tdd -R spec",
-    "test": "./node_modules/mocha/bin/_mocha --exit -u tdd -R spec"
+    "test": "./node_modules/mocha/bin/_mocha --exit -u tdd -R spec",
+    "coverage": "./node_modules/.bin/nyc --reporter=lcov --reporter=text-lcov ./node_modules/mocha/bin/_mocha -- -u tdd -R spec"
   },
   "mocha": {
     "diff": true,
