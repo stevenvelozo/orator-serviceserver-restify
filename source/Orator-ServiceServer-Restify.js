@@ -1,15 +1,16 @@
-const libOratorServiceServerBase = require('orator').ServiceServerBase;
+const libOratorServiceServerBase = require('orator-serviceserver-base');
 const libRestify = require('restify');
 
 class OratorServiceServerRestify extends libOratorServiceServerBase
 {
-	constructor(pOrator)
+	constructor(pFable, pOptions, pServiceHash)
 	{
-		super(pOrator);
+        super(pFable, pOptions, pServiceHash);
 
 		this.ServiceServerType = 'Restify';
 
-		this.server = libRestify.createServer();
+		let tmpRestifyConfiguration = (this.options.hasOwnProperty('RestifyConfiguration')) ? this.options.RestifyConfiguration : {};
+		this.server = libRestify.createServer(tmpRestifyConfiguration);
 	}
 
 	/*
@@ -20,6 +21,7 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 		this.server.listen(pPort, (pError) =>
 			{
 				this.Active = true;
+				this.Port = pPort;
 				this.log.info(`RESTIFY server [${this.server.name}] listening on [${this.server.url}].`);
 				return fCallback(pError);
 			});
