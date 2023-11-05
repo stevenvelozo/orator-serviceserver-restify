@@ -9,12 +9,6 @@ const Expect = Chai.expect;
 const Assert = Chai.assert;
 
 const libFable = require('fable');
-
-const _Fable = new libFable({
-	"Product": "Orator-ServiceServier-Restify-BasicTests",
-	"ProductVersion": "0.0.0"
-})
-
 const libOrator = require('orator');
 const libOratorServiceServerRestify = require('../source/Orator-ServiceServer-Restify.js');
 
@@ -22,7 +16,7 @@ const libOratorServiceServerRestify = require('../source/Orator-ServiceServer-Re
 
 suite
 (
-	'Meadow-Endpoints-Core',
+	'Orator Restify Abstraction',
 	() =>
 	{
 		suite
@@ -35,13 +29,28 @@ suite
 					'The class should initialize itself into a happy little object.',
 					function (fDone)
 					{
-						let tmpOrator = new libOrator(_Fable, libOratorServiceServerRestify);
+						// Initialize fable
+						let tmpFable = new libFable();
+
+						// Add Restify as the default service server type
+						tmpFable.addServiceType('OratorServiceServer', libOratorServiceServerRestify);
+
+						// We can safely create the service now if we want, or after Orator is created.  As long as it's before we initialize orator.
+						let tmpOratorServiceServerRestify = tmpFable.instantiateServiceProvider('OratorServiceServer', {});
+
+						// Add Orator as a service
+						tmpFable.addServiceType('Orator', libOrator);
+
+						// Initialize the Orator service
+						let tmpOrator = tmpFable.instantiateServiceProvider('Orator', {});
+						// Sanity check Orator
 						Expect(tmpOrator).to.be.an('object', 'Orator should initialize as an object directly from the require statement.');
-						Expect(tmpOrator.startService).to.be.an('function');
-						Expect(tmpOrator.settings).to.be.an('object');
-						tmpOrator.initializeServiceServer(
+
+						tmpOrator.initialize(
 							(pError)=>
 							{
+								Expect(tmpOrator.startService).to.be.an('function');
+
 								Expect(tmpOrator.serviceServer.ServiceServerType).to.equal('Restify', 'The service server provider should be Restify.');
 								fDone();
 							});

@@ -3,7 +3,7 @@ const defaultFableSettings = (
 	{
 		Product:'Orator-ServiceServer-Restify-Harness',
 		ProductVersion: '1.0.0',
-		APIServerPort: 8086
+		APIServerPort: 7766
 	});
 
 // Initialize Fable
