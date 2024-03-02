@@ -37,7 +37,7 @@ _Fable.Utility.waterfall(
 					pResponse.send(pRequest.params);
 					_Orator.fable.log.info(`Endpoint sent parameters object:`,pRequest.params);
 					// Restify will be unhappy with this due to strictNext
-					fNext()
+					//fNext()
 					return fNext();
 				}
 			);

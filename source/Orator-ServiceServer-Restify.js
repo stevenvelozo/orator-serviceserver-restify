@@ -9,7 +9,10 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 
 		this.ServiceServerType = 'Restify';
 
-		let tmpRestifyConfiguration = (this.options.hasOwnProperty('RestifyConfiguration')) ? this.options.RestifyConfiguration : {};
+		let tmpRestifyConfiguration = (this.options.hasOwnProperty('RestifyConfiguration')) ? this.options.RestifyConfiguration :
+			(this.fable.settings.hasOwnProperty('RestifyConfiguration')) ? this.fable.settings.RestifyConfiguration :
+			{};
+
 		this.server = libRestify.createServer(tmpRestifyConfiguration);
 	}
 
