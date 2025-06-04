@@ -104,3 +104,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+/.babelrc
+/.browserslistrc
+/.browserslistrc-BACKUP
+/.gulpfile-quackage-config.json
+/.gulpfile-quackage.js

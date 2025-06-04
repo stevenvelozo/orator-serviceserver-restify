@@ -1,6 +1,10 @@
 const libOratorServiceServerBase = require('orator-serviceserver-base');
 const libRestify = require('restify');
 
+const _DefaultRestifyConfiguration =
+{
+	maxParamLength: Number.MAX_SAFE_INTEGER,
+};
 class OratorServiceServerRestify extends libOratorServiceServerBase
 {
 	constructor(pFable, pOptions, pServiceHash)
@@ -13,7 +17,7 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 			(this.fable.settings.hasOwnProperty('RestifyConfiguration')) ? this.fable.settings.RestifyConfiguration :
 			{};
 
-		this.server = libRestify.createServer(tmpRestifyConfiguration);
+		this.server = libRestify.createServer(Object.assign({}, _DefaultRestifyConfiguration, tmpRestifyConfiguration));
 	}
 
 	/*
