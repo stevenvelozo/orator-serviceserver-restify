@@ -58,6 +58,17 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 		this.server.use(fHandlerFunction);
 	}
 
+	pre(fHandlerFunction)
+	{
+		if (!super.pre(fHandlerFunction))
+		{
+			this.log.error(`RESTIFY provider failed to map PRE handler function!`);
+			return false;
+		}
+
+		this.server.pre(fHandlerFunction);
+	}
+
 	bodyParser()
 	{
 		// Restify has a built-in bodyParser plugin that returns a standard
