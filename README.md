@@ -105,7 +105,14 @@ npx docsify-cli serve docs
 
 ## Related Packages
 
-- [orator](https://github.com/stevenvelozo/orator) - Main Orator service abstraction
-- [orator-serviceserver-base](https://github.com/stevenvelozo/orator-serviceserver-base) - Abstract base class
-- [fable](https://github.com/stevenvelozo/fable) - Service provider framework
-- [restify](https://restify.com/) - Underlying HTTP server framework
+- [orator](https://github.com/stevenvelozo/orator) - API server abstraction
+- [orator-serviceserver-base](https://github.com/stevenvelozo/orator-serviceserver-base) - Abstract service server base class
+- [fable](https://github.com/stevenvelozo/fable) - Application services framework
+
+## License
+
+MIT
+
+## Contributing
+
+Pull requests are welcome. For details on our code of conduct, contribution process, and testing requirements, see the [Retold Contributing Guide](https://github.com/stevenvelozo/retold/blob/main/docs/contributing.md).

@@ -1,6 +1,6 @@
 {
     "name": "orator-serviceserver-restify",
-    "version": "2.0.6",
+    "version": "2.0.7",
     "description": "Restify Service Server for Orator",
     "main": "source/Orator-ServiceServer-Restify.js",
     "scripts": {
@@ -46,8 +46,8 @@
         "restify": "^11.1.0"
     },
     "devDependencies": {
-        "fable": "^3.0.112",
-        "orator": "^4.0.3",
-        "quackage": "^1.0.28"
+        "fable": "^3.1.55",
+        "orator": "^6.0.1",
+        "quackage": "^1.0.51"
     }
 }
