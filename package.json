@@ -1,6 +1,6 @@
 {
     "name": "orator-serviceserver-restify",
-    "version": "2.0.8",
+    "version": "2.0.9",
     "description": "Restify Service Server for Orator",
     "main": "source/Orator-ServiceServer-Restify.js",
     "scripts": {
@@ -46,7 +46,7 @@
     },
     "homepage": "https://github.com/stevenvelozo/orator-serviceserver-restify#readme",
     "dependencies": {
-        "orator-serviceserver-base": "^1.0.5",
+        "orator-serviceserver-base": "^1.0.6",
         "restify": "^11.1.0"
     },
     "devDependencies": {
