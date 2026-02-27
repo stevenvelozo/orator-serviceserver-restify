@@ -4,8 +4,8 @@
     "description": "Restify Service Server for Orator",
     "main": "source/Orator-ServiceServer-Restify.js",
     "scripts": {
-        "test": "./node_modules/mocha/bin/_mocha --exit -u tdd -R spec",
-        "coverage": "./node_modules/.bin/nyc --reporter=lcov --reporter=text-lcov ./node_modules/mocha/bin/_mocha -- -u tdd -R spec",
+        "test": "npx mocha -u tdd --exit -R spec",
+        "coverage": "npx quack coverage",
         "start": "node source/Orator-ServiceServer-Restify.js",
         "tests": "npx mocha -u tdd --exit -R spec --grep",
         "build": "npx quack build",
