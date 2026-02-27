@@ -4,10 +4,10 @@
     "description": "Restify Service Server for Orator",
     "main": "source/Orator-ServiceServer-Restify.js",
     "scripts": {
-        "test": "npx mocha -u tdd --exit -R spec",
+        "test": "npx quack test",
         "coverage": "npx quack coverage",
         "start": "node source/Orator-ServiceServer-Restify.js",
-        "tests": "npx mocha -u tdd --exit -R spec --grep",
+        "tests": "npx quack test -g",
         "build": "npx quack build",
         "docker-dev-build": "docker build ./ -f Dockerfile_LUXURYCode -t orator-serviceserver-restify-image:local",
         "docker-dev-run": "docker run -it -d --name orator-serviceserver-restify-dev -p 14617:8080 -p 24395:8086 -v \"$PWD/.config:/home/coder/.config\"  -v \"$PWD:/home/coder/orator-serviceserver-restify\" -u \"$(id -u):$(id -g)\" -e \"DOCKER_USER=$USER\" orator-serviceserver-restify-image:local",
