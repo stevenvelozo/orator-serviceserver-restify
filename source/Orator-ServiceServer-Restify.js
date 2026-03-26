@@ -5,6 +5,9 @@ const _DefaultRestifyConfiguration =
 {
 	maxParamLength: Number.MAX_SAFE_INTEGER,
 };
+/**
+ * @extends {libOratorServiceServerBase<import('restify').Request, import('restify').Response, import('restify').Server>}
+ */
 class OratorServiceServerRestify extends libOratorServiceServerBase
 {
 	/**
@@ -22,7 +25,7 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 			(this.fable.settings.hasOwnProperty('RestifyConfiguration')) ? this.fable.settings.RestifyConfiguration :
 			{};
 
-		/** @type {libRestify} */
+		/** @type {import('restify').Server} */
 		this.server = libRestify.createServer(Object.assign({}, _DefaultRestifyConfiguration, tmpRestifyConfiguration));
 	}
 
@@ -68,7 +71,7 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 	/**
 	 * Registers a global handler function to be used by the Orator service server.
 	 *
-	 * @param {import('orator-serviceserver-base').RequestHandler} fHandlerFunction - The handler function to be registered. It should have the prototype function(Request, Response, Next).
+	 * @param {import('orator-serviceserver-base').RequestHandler<import('restify').Request, import('restify').Response>} fHandlerFunction - The handler function to be registered. It should have the prototype function(Request, Response, Next).
 	 * @returns {any} - The result of adding the route to the concrete service provider (ex. a route object, a boolean).
 	 */
 	use(fHandlerFunction)
@@ -85,7 +88,7 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 	/**
 	 * Registers a global handler function to be used by the Orator service server that runs before routing.
 	 *
-	 * @param {function} fHandlerFunction - The handler function to be registered. It should have the prototype function(Request, Response, Next).
+	 * @param {import('orator-serviceserver-base').RequestHandler<import('restify').Request, import('restify').Response>} fHandlerFunction - The handler function to be registered. It should have the prototype function(Request, Response, Next).
 	 * @returns {any} - The result of adding the route to the concrete service provider (ex. a route object, a boolean).
 	 */
 	pre(fHandlerFunction)
@@ -103,7 +106,7 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 	 * Middleware function for parsing the request body.
 	 *
 	 * @param {Record<string, any>} [pOptions] - The options for the body parser.
-	 * @return {import('orator-serviceserver-base').RequestHandler} - The middleware function.
+	 * @return {import('restify').RequestHandler[]} - The middleware function.
 	 */
 	bodyParser(pOptions)
 	{
@@ -143,7 +146,7 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 	 * Handles HTTP GET requests -- this is a base function that does nothing; override by the serviceserver is expected.
 	 *
 	 * @param {string} pRoute - The route of the request.
-	 * @param {...Function} fRouteProcessingFunctions - The processing functions for the route.
+	 * @param {...import('restify').RequestHandlerType} fRouteProcessingFunctions - The processing functions for the route.
 	 * @returns {any} - The result of adding the route to the concrete service provider (ex. a route object, a boolean).
 	 */
 	doGet(pRoute, ...fRouteProcessingFunctions)
@@ -155,7 +158,7 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 	 * Handles HTTP PUT requests -- this is a base function that does nothing; override by the serviceserver is expected.
 	 *
 	 * @param {string} pRoute - The route to handle.
-	 * @param {...Function} fRouteProcessingFunctions - The processing functions to execute for the route.
+	 * @param {...import('restify').RequestHandlerType} fRouteProcessingFunctions - The processing functions to execute for the route.
 	 * @returns {any} - The result of adding the route to the concrete service provider (ex. a route object, a boolean).
 	 */
 	doPut(pRoute, ...fRouteProcessingFunctions)
@@ -167,7 +170,7 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 	 * Handles the HTTP POST request for a specific route.
 	 *
 	 * @param {string} pRoute - The route to handle the POST request for.
-	 * @param {...Function} fRouteProcessingFunctions - The processing functions to execute for the route.
+	 * @param {...import('restify').RequestHandlerType} fRouteProcessingFunctions - The processing functions to execute for the route.
 	 * @returns {any} - The result of adding the route to the concrete service provider (ex. a route object, a boolean).
 	 */
 	doPost(pRoute, ...fRouteProcessingFunctions)
@@ -179,7 +182,7 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 	 * Handles HTTP DELETE requests -- this is a base function that does nothing; override by the serviceserver is expected.
 	 *
 	 * @param {string} pRoute - The route of the resource to delete.
-	 * @param {...Function} fRouteProcessingFunctions - The processing functions to be executed to delete the resource.
+	 * @param {...import('restify').RequestHandlerType} fRouteProcessingFunctions - The processing functions to be executed to delete the resource.
 	 * @returns {any} - The result of adding the route to the concrete service provider (ex. a route object, a boolean).
 	 */
 	doDel(pRoute, ...fRouteProcessingFunctions)
@@ -191,7 +194,7 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 	 * Handles HTTP PATCH requests -- this is a base function that does nothing; override by the serviceserver is expected.
 	 *
 	 * @param {string} pRoute - The route to send the PATCH request to.
-	 * @param {...Function} fRouteProcessingFunctions - The processing functions to apply to the route.
+	 * @param {...import('restify').RequestHandlerType} fRouteProcessingFunctions - The processing functions to apply to the route.
 	 * @returns {any} - The result of adding the route to the concrete service provider (ex. a route object, a boolean).
 	 */
 	doPatch(pRoute, ...fRouteProcessingFunctions)
@@ -203,7 +206,7 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 	 * Handles HTTP OPT requests -- this is a base function that does nothing; override by the serviceserver is expected.
 	 *
 	 * @param {string} pRoute - The route.
-	 * @param {...Function} fRouteProcessingFunctions - The processing functions to apply to the route.
+	 * @param {...import('restify').RequestHandlerType} fRouteProcessingFunctions - The processing functions to apply to the route.
 	 * @returns {any} - The result of adding the route to the concrete service provider (ex. a route object, a boolean).
 	 */
 	doOpts(pRoute, ...fRouteProcessingFunctions)
@@ -215,7 +218,7 @@ class OratorServiceServerRestify extends libOratorServiceServerBase
 	 * Handles HTTP HEAD requests -- this is a base function that does nothing; override by the serviceserver is expected.
 	 *
 	 * @param {string} pRoute - The route to handle the HEAD request for.
-	 * @param {...Function} fRouteProcessingFunctions - The processing functions to execute for the route.
+	 * @param {...import('restify').RequestHandlerType} fRouteProcessingFunctions - The processing functions to execute for the route.
 	 * @returns {any} - The result of adding the route to the concrete service provider (ex. a route object, a boolean).
 	 */
 	doHead(pRoute, ...fRouteProcessingFunctions)
