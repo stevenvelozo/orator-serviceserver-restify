@@ -1,4 +1,4 @@
-# Orator ServiceServer Restify <small>2</small>
+# Orator ServiceServer Restify
 
 > Production HTTP service server for Orator, powered by Restify
 
