@@ -60,6 +60,7 @@
         "fable": "^3.1.67",
         "globals": "^16.5.0",
         "orator": "^6.0.4",
+        "pict-docuserve": "^0.1.5",
         "quackage": "^1.1.0",
         "typescript": "^5.9.3"
     }
