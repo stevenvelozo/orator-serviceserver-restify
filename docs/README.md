@@ -51,10 +51,10 @@ npm install orator-serviceserver-restify
 The Restify service server creates a Restify server instance in its constructor and delegates all route and middleware registration directly to it:
 
 ```
-Orator → serviceServer.get('/path', handler)
-  → OratorServiceServerBase.get() [validates route]
-    → OratorServiceServerRestify.doGet() [calls this.server.get()]
-      → Restify server handles the route
+Orator -> serviceServer.get('/path', handler)
+  -> OratorServiceServerBase.get() [validates route]
+    -> OratorServiceServerRestify.doGet() [calls this.server.get()]
+      -> Restify server handles the route
 ```
 
 ## Accessing the Raw Restify Server
