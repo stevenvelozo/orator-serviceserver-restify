@@ -637,10 +637,7 @@ suite
 						tmpHarness.orator.startService(
 							() =>
 							{
-								// Note: The base class head() method has a known issue where it
-								// returns true without calling doHead(), so we call doHead directly
-								// on the restify service server to register the HEAD route.
-								tmpHarness.orator.serviceServer.doHead('/api/status',
+								tmpHarness.orator.serviceServer.head('/api/status',
 									(pRequest, pResponse, fNext) =>
 									{
 										pResponse.header('X-Custom-Header', 'TestValue');

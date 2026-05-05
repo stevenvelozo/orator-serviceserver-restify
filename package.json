@@ -1,6 +1,6 @@
 {
     "name": "orator-serviceserver-restify",
-    "version": "2.0.10",
+    "version": "2.0.11",
     "description": "Restify Service Server for Orator",
     "main": "source/Orator-ServiceServer-Restify.js",
     "scripts": {
@@ -46,7 +46,7 @@
     },
     "homepage": "https://github.com/stevenvelozo/orator-serviceserver-restify#readme",
     "dependencies": {
-        "orator-serviceserver-base": "^1.0.7",
+        "orator-serviceserver-base": "^1.0.8",
         "restify": "^11.1.0"
     },
     "devDependencies": {
@@ -57,11 +57,11 @@
         "@types/restify": "^8.5.12",
         "@types/sinon": "^17.0.4",
         "eslint": "^9.39.1",
-        "fable": "^3.1.67",
+        "fable": "^3.1.71",
         "globals": "^16.5.0",
-        "orator": "^6.0.4",
+        "orator": "^6.1.1",
         "pict-docuserve": "^0.1.5",
-        "quackage": "^1.1.0",
+        "quackage": "^1.2.3",
         "typescript": "^5.9.3"
     }
 }
