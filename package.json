@@ -57,10 +57,10 @@
         "@types/restify": "^8.5.12",
         "@types/sinon": "^17.0.4",
         "eslint": "^9.39.1",
-        "fable": "^3.1.71",
+        "fable": "^3.1.72",
         "globals": "^16.5.0",
-        "orator": "^6.1.1",
-        "pict-docuserve": "^0.1.5",
+        "orator": "^6.1.2",
+        "pict-docuserve": "^1.0.1",
         "quackage": "^1.2.3",
         "typescript": "^5.9.3"
     }

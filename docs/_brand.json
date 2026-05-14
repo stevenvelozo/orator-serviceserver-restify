@@ -1,0 +1,18 @@
+{
+	"Hash": "orator-serviceserver-restify",
+	"Name": "Orator Serviceserver Restify",
+	"Tagline": "Production HTTP server implementation for Orator powered by Restify",
+	"Palette": "mix",
+	"Icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 96 96\" width=\"96\" height=\"96\">\n\t\t<defs>\n\t\t\t<clipPath id=\"frame-orator-serviceserver-restify-filled-light\">\n\t\t\t\t<path d=\"M 2 48\n\t\t\tA 46 46 0 1 0 94 48\n\t\t\tA 46 46 0 1 0 2 48 Z\"/>\n\t\t\t</clipPath>\n\t\t</defs>\n\t\t<path d=\"M 2 48\n\t\t\tA 46 46 0 1 0 94 48\n\t\t\tA 46 46 0 1 0 2 48 Z\" fill=\"#3ab3eb\"/>\n\t\t<g clip-path=\"url(#frame-orator-serviceserver-restify-filled-light)\"><path d=\"M 48.00,12.00 L 79.18,30.00 L 79.18,66.00 L 48.00,84.00 L 16.82,66.00 L 16.82,30.00 Z\" fill=\"#ed5db8\"/>\n\t\t\t\t\t<circle cx=\"48\" cy=\"48\" r=\"24\" fill=\"rgba(255,255,255,0.18)\"/></g>\n\t\t<text x=\"48\" y=\"50\" text-anchor=\"middle\" dominant-baseline=\"central\"\n\t\t\tfont-family=\"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif\"\n\t\t\tfont-size=\"28\" font-weight=\"700\"\n\t\t\tfill=\"#ffffff\" letter-spacing=\"-1\">OSR</text>\n\t</svg>",
+	"IconType": "svg",
+	"Favicon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 96 96\" width=\"96\" height=\"96\">\n\t\t<defs>\n\t\t\t<clipPath id=\"fav-orator-serviceserver-restify-light\">\n\t\t\t\t<path d=\"M 2 48\n\t\t\tA 46 46 0 1 0 94 48\n\t\t\tA 46 46 0 1 0 2 48 Z\"/>\n\t\t\t</clipPath>\n\t\t</defs>\n\t\t<path d=\"M 2 48\n\t\t\tA 46 46 0 1 0 94 48\n\t\t\tA 46 46 0 1 0 2 48 Z\" fill=\"#3ab3eb\"/>\n\t\t<g clip-path=\"url(#fav-orator-serviceserver-restify-light)\"><path d=\"M 48.00,12.00 L 79.18,30.00 L 79.18,66.00 L 48.00,84.00 L 16.82,66.00 L 16.82,30.00 Z\" fill=\"#ed5db8\"/></g>\n\t\t<text x=\"48\" y=\"50\" text-anchor=\"middle\" dominant-baseline=\"central\"\n\t\t\tfont-family=\"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif\"\n\t\t\tfont-size=\"60\" font-weight=\"800\"\n\t\t\tfill=\"#ffffff\" letter-spacing=\"-1\">O</text>\n\t</svg>",
+	"FaviconDark": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 96 96\" width=\"96\" height=\"96\">\n\t\t<defs>\n\t\t\t<clipPath id=\"fav-orator-serviceserver-restify-dark\">\n\t\t\t\t<path d=\"M 2 48\n\t\t\tA 46 46 0 1 0 94 48\n\t\t\tA 46 46 0 1 0 2 48 Z\"/>\n\t\t\t</clipPath>\n\t\t</defs>\n\t\t<path d=\"M 2 48\n\t\t\tA 46 46 0 1 0 94 48\n\t\t\tA 46 46 0 1 0 2 48 Z\" fill=\"#91d2ef\"/>\n\t\t<g clip-path=\"url(#fav-orator-serviceserver-restify-dark)\"><path d=\"M 48.00,12.00 L 79.18,30.00 L 79.18,66.00 L 48.00,84.00 L 16.82,66.00 L 16.82,30.00 Z\" fill=\"#f2a6d6\"/></g>\n\t\t<text x=\"48\" y=\"50\" text-anchor=\"middle\" dominant-baseline=\"central\"\n\t\t\tfont-family=\"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif\"\n\t\t\tfont-size=\"60\" font-weight=\"800\"\n\t\t\tfill=\"#101418\" letter-spacing=\"-1\">O</text>\n\t</svg>",
+	"Colors": {
+		"Primary": "#3ab3eb",
+		"Secondary": "#ed5db8",
+		"PrimaryLight": "#3ab3eb",
+		"PrimaryDark": "#91d2ef",
+		"SecondaryLight": "#ed5db8",
+		"SecondaryDark": "#f2a6d6"
+	}
+}
