@@ -1,5 +1,7 @@
 # Orator ServiceServer Restify
 
+> **[&#9654; Read the Orator-Serviceserver-Restify Documentation](https://stevenvelozo.github.io/orator-serviceserver-restify/)** &mdash; interactive docs with the full API reference.
+
 > Production HTTP service server for Orator, powered by Restify
 
 This is the Restify implementation of the Orator service server interface. It wraps [Restify](https://restify.com/) to provide a full-featured HTTP API server with body parsing, middleware, and all standard HTTP verbs. When you need a real network-facing API server, this is the module you reach for.
