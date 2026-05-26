@@ -2,6 +2,6 @@
 	"Name": "orator-serviceserver-restify",
 	"Version": "2.0.11",
 	"Description": "Restify Service Server for Orator",
-	"GeneratedAt": "2026-05-26T18:20:41.679Z",
-	"GitCommit": "097bca9"
+	"GeneratedAt": "2026-05-26T21:12:41.450Z",
+	"GitCommit": "10bddc3"
 }
