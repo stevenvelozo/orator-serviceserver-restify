@@ -37,14 +37,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/stevenvelozo/orator-serviceserver-restify.git"
+        "url": "git+https://github.com/fable-retold/orator-serviceserver-restify.git"
     },
     "author": "steven velozo <steven@velozo.com>",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/stevenvelozo/orator-serviceserver-restify/issues"
+        "url": "https://github.com/fable-retold/orator-serviceserver-restify/issues"
     },
-    "homepage": "https://github.com/stevenvelozo/orator-serviceserver-restify#readme",
+    "homepage": "https://github.com/fable-retold/orator-serviceserver-restify#readme",
     "dependencies": {
         "orator-serviceserver-base": "^1.0.8",
         "restify": "^11.1.0"

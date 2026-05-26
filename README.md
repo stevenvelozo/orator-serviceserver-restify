@@ -1,6 +1,6 @@
 # Orator ServiceServer Restify
 
-> **[&#9654; Read the Orator-Serviceserver-Restify Documentation](https://stevenvelozo.github.io/orator-serviceserver-restify/)** &mdash; interactive docs with the full API reference.
+> **[&#9654; Read the Orator-Serviceserver-Restify Documentation](https://fable-retold.github.io/orator-serviceserver-restify/)** &mdash; interactive docs with the full API reference.
 
 > Production HTTP service server for Orator, powered by Restify
 
@@ -107,9 +107,9 @@ npx docsify-cli serve docs
 
 ## Related Packages
 
-- [orator](https://github.com/stevenvelozo/orator) - API server abstraction
-- [orator-serviceserver-base](https://github.com/stevenvelozo/orator-serviceserver-base) - Abstract service server base class
-- [fable](https://github.com/stevenvelozo/fable) - Application services framework
+- [orator](https://github.com/fable-retold/orator) - API server abstraction
+- [orator-serviceserver-base](https://github.com/fable-retold/orator-serviceserver-base) - Abstract service server base class
+- [fable](https://github.com/fable-retold/fable) - Application services framework
 
 ## License
 

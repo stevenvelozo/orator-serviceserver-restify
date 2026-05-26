@@ -7,5 +7,5 @@
 - Built-in body parser with multipart support
 - Seamless integration with the Orator service lifecycle
 
-[GitHub](https://github.com/stevenvelozo/orator-serviceserver-restify)
+[GitHub](https://github.com/fable-retold/orator-serviceserver-restify)
 [Get Started](#orator-serviceserver-restify)
