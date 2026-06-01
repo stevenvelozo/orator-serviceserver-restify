@@ -1,6 +1,6 @@
 # Orator ServiceServer Restify
 
-> **[&#9654; Read the Orator-Serviceserver-Restify Documentation](https://fable-retold.github.io/orator-serviceserver-restify/)** &mdash; interactive docs with the full API reference.
+> **[Read the Orator-Serviceserver-Restify Documentation](https://fable-retold.github.io/orator-serviceserver-restify/)** - interactive docs with the full API reference.
 
 > Production HTTP service server for Orator, powered by Restify
 
