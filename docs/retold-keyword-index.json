@@ -1,5 +1,5 @@
 {
-	"Generated": "2026-05-26T21:12:41.432Z",
+	"Generated": "2026-06-01T03:45:06.069Z",
 	"Mode": "module",
 	"DocumentCount": 6,
 	"LunrIndex": {
@@ -2444,18 +2444,6 @@
 				}
 			],
 			[
-				"seamless",
-				{
-					"_index": 73,
-					"title": {},
-					"module": {},
-					"group": {},
-					"body": {
-						"_cover.md": {}
-					}
-				}
-			],
-			[
 				"server",
 				{
 					"_index": 6,
@@ -2570,6 +2558,18 @@
 					"group": {},
 					"body": {
 						"body-parsing.md": {}
+					}
+				}
+			],
+			[
+				"smooth",
+				{
+					"_index": 73,
+					"title": {},
+					"module": {},
+					"group": {},
+					"body": {
+						"_cover.md": {}
 					}
 				}
 			],
