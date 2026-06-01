@@ -70,5 +70,5 @@ This gives you direct access to any Restify-specific features not exposed throug
 ## Related Packages
 
 - [orator](https://fable-retold.github.io/orator/) - Main Orator service abstraction
-- [orator-serviceserver-base](https://github.com/fable-retold/orator-serviceserver-base) - Abstract base class
+- [orator-serviceserver-base](https://fable-retold.github.io/orator-serviceserver-base/) - Abstract base class
 - [fable](https://fable-retold.github.io/fable/) - Service provider framework
